@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>JS Serialize Form Example</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Include CSS File Here-->
+    <link href="style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -16,13 +19,82 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <main>
+      <div class="container">
+        <div class="page-header">
+          <h1>JS Serialize Form Data Example</h1>
+        </div>
+        <p class="lead">Fill out the form below to access your free download.</p>
+        <form class="form-horizontal">
+          <section>
+            <div class="form-group">
+              <label for="name" class="col-sm-2 control-label">Name</label>
+              <div class="col-sm-10">
+                <input type="text" name="name" class="form-control" placeholder="Elizabeth Sloane">
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="form-group">
+              <label for="email" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" name="email" class="form-control" placeholder="e.sloane@email.com">
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Gender</label>
+              <div class="col-sm-10 inline-group">
+                <label class="radio">
+                  <input type="radio" name="gender" value="male">
+                  Male
+                </label>
+                <label class="radio">
+                  <input type="radio" name="gender" value="female">
+                  Female
+                </label>
+                <label class="radio">
+                  <input type="radio" name="gender" value="other">
+                  Other
+                </label>
+              </div>
+            </div>
+        </section>
+        </form>
+        <hr />
+        <p class="lead">Convert form data to object, array, or string</p>
+        <p>.serializeArray() to object: <br /><pre id="obj">&nbsp;</pre></p>
+        <p>.serializeArray(): <br /><pre id="serializearray">&nbsp;</pre></p>
+        <p>.serialize(): <br /><pre id="serialize">&nbsp;</pre></p>
+        </p>
+      </div>
+    </main>
+
+<!-- <form>
+<input type="radio" name="foo" value="1" checked="checked" />
+<input type="radio" name="foo" value="0" />
+<input name="bar" value="xxx" />
+<select name="this">
+ <option value="hi" selected="selected">Hi</option>
+ <option value="ho">Ho</option>
+</select>
+</form>
+
+<div>$('form').serializeArray():</div>
+<div id=serializearray>asfdg</div>
+
+<div>$('form').serialize():</div>
+<div id=serialize>asfdg</div> -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Include JavaScript File Here-->
+    <script src="serialize.js"></script>
   </body>
 </html>
